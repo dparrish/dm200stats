@@ -10,3 +10,13 @@ $ ./dm200stats -user <username> -pass <password> -port 8080 10.0.0.1
 ```
 
 Statistics will be exported by HTTP on the supplied `-port`.
+
+## Docker Use
+
+```shell
+$ docker run -d -P --name dm200stats \
+		-e DM200_USER=admin \
+		-e DM200_PASS=admin \
+		-e DM200_IP=10.0.0.1 \
+		dparrish/dm200stats
+```
